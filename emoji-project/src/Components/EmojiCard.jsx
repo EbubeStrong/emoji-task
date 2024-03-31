@@ -48,7 +48,7 @@ const EmojiCard = () => {
 
       <div className="card">
         <div id="emojiList">
-          {emojiData.filteredData.map((item, index) => <span emoji-name={item.slug} key={index}>
+          {emojiData.filteredData.map((item, index) => <span className="image" emoji-name={item.slug} key={index}>
             {item.character}
           </span>)}
         </div>
