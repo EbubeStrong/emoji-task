@@ -12,6 +12,7 @@ const EmojiCard = () => {
     data: [],
     filteredData: []
   })
+  const [input, setInput] = useState("")
   useEffect(() => {
     fetch("https://emoji-api.com/emojis?access_key=dc9be100e84f19a4eb9454e8542b2616dbca7c9c")
       .then(response => response.json())
@@ -23,17 +24,18 @@ const EmojiCard = () => {
       });
   }, [])
 
-  const filterEmoji = (search) => {
-    let filteredData = search == "" ? [] : emojiData.data.filter(item => item.slug.toLowerCase().includes(search.toLowerCase()));
+  const filterEmoji = (ev) => {
+    ev.preventDefault();
+    let filteredData = input == "" ? [] : emojiData.data.filter(item => item.slug.toLowerCase().includes(input.toLowerCase()));
     setEmojiData(prev => ({ ...prev, filteredData }))
   }
 
 
   return (
     <>
-      <form className="emojiForm">
+      <form className="emojiForm" onSubmit={(e) => filterEmoji(e)}>
         <div className="inputForm">
-          <input type="text" className="emojiInput" placeholder="Search Emoji" onKeyUp={(e) => filterEmoji(e.target.value)} />
+          <input type="text" className="emojiInput" placeholder="Search Emoji" onKeyUp={(e) => setInput(e.target.value)} />
           <span className="loader">⏳</span>
         </div>
 
