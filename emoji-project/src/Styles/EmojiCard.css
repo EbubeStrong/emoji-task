@@ -1,3 +1,49 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.emojiForm{
+    border: 2px solid red;
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+}
+.inputForm{
+    border: 2px solid green;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.emojiInput{
+    width: 90%;
+    padding: 1rem 0 1rem 1rem;
+    margin-left: 20px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+    outline: 3px solid rgb(8, 216, 205)
+}
+.loader{
+    margin-right: 15px;
+    font-size: 2rem;
+}
+.btn{
+    border: 2px solid blue;
+    margin-right: 20px;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+.btn button{
+    font-size: 4rem;
+} */
+
 *{
     margin: 0;
     padding: 0;
@@ -42,4 +88,38 @@ body{
 }
 .btn button{
     font-size: 4rem;
+}
+
+.card{
+    background-color: lightgrey;
+    border: 2px solid orange;
+    margin-top: 20px;
+    padding: 20px 50px 30px 50px;
+    display: flex;
+    /* flex-direction: coloum */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 300px; */
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);
+    /* display: none; */
+}
+.container{
+    /* display: flex; */
+    /* border: 2px solid black; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.divContainer{
+    display: block;
+}
+.image{
+    font-size: 10rem;
+}
+.wrap{
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
