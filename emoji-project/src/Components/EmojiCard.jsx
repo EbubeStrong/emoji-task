@@ -1,8 +1,5 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-// const apiKey = mo
-// const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
-// const apiUrl = `https://emoji-api.com/emojis?access_key=${apiKey}`
 
 import '../Styles/EmojiCard.css'
 
@@ -36,7 +33,6 @@ const EmojiCard = () => {
       <form className="emojiForm" onSubmit={(e) => filterEmoji(e)}>
         <div className="inputForm">
           <input type="text" className="emojiInput" placeholder="Search Emoji" onKeyUp={(e) => setInput(e.target.value)} />
-          <span className="loader">⏳</span>
         </div>
 
         <div className="btn">
